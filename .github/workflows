@@ -1,0 +1,37 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # Actualizado de v3 a v4
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # Actualizado de v3 a v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      # Actualizado de v2 a v3 (Este era el que causaba el error)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # Sube el contenido de tu carpeta 'public'
+          path: './public'
+
+      # Actualizado de v2 a v4
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
