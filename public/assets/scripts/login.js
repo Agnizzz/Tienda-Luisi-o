@@ -12,7 +12,7 @@ function validarLogin(event) {
         passwordInput === CLAVE_SECRETA
     ) {
         alert("Login exitoso");
-        window.location.href = "inicio.html";
+        window.location.href = "sitios/inicio.html";
     } else {
         alert("Usuario o contraseña incorrectos");
         document.getElementById("password").value = "";

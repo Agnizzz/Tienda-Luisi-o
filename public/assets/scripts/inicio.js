@@ -11,7 +11,7 @@ let carrito = [];
 const TALLAS = ['0', '2', '4', '6', '8', '10', '12', '14', '16', 'S', 'M', 'L', 'XL', 'Única'];
 
 // 1. Cargar Datos
-fetch('assets/data/productos.json')
+fetch('../assets/json/productos.json')
     .then(res => res.json())
     .then(data => productos = data);
 
@@ -191,5 +191,5 @@ function cerrarSesion() {
     // Aquí iría tu lógica real, por ejemplo:
     // window.location.href = 'login.html';
     alert("Cerrando sesión...");
-    window.location.href = "login.html";
+    window.location.href = "../index.html";
 }
