@@ -436,6 +436,46 @@ header {
     color: white;
 }
 
+/* Agrega esto a tu inicio.css si quieres refinar el botón */
+.btn-edit-mode {
+    color: white; /* O el color que uses para texto */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.btn-edit-mode:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+.logout-section{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 10px;
+}
+.restaurar-btn {
+    color: white; /* O el color que uses para texto */
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+.restaurar-btn:hover {
+    opacity: 1;
+    transform: scale(1.1);
+
+}
+.logout-btn span {
+    font-size: 1rem;
+}
+.logout-btn svg {
+    width: 20px;
+    height: 20px;
+}
+.logout-btn:hover svg {
+    stroke: white;
+}
+.logout-btn:active {
+    transform: scale(0.95);
+}
+
+
 /* Ajuste para móviles (opcional) */
 @media (max-width: 600px) {
     .logo h1 {
@@ -446,4 +486,15 @@ header {
     .logout-btn span {
         display: none; /* Ocultar la palabra "Salir" en celular, dejar solo icono */
     }
+    .logout-btn {
+        padding: 6px 10px;
+    }
+    .top-header {
+        padding: 0 10px;
+    }
+    .main-container {
+        padding: 80px 20px 20px 20px;
+    }
+    
+
 }
